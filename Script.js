@@ -101,7 +101,7 @@ if (bulkOrderForm) {
 
         try {
             const formData = new FormData(bulkOrderForm);
-            const response = await fetch("/", {
+            const response = await fetch("/api/quotes", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encodeFormData(formData)
@@ -121,3 +121,4 @@ if (bulkOrderForm) {
         }
     });
 }
+
