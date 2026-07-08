@@ -15,7 +15,11 @@ function showToast(message) {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
         toast.classList.remove("show");
-    }, 2200);
+    }, 2600);
+}
+
+function encodeFormData(formData) {
+    return new URLSearchParams(formData).toString();
 }
 
 function switchAuthTab(tabName) {
@@ -80,9 +84,10 @@ registerForm.addEventListener("submit", (event) => {
 });
 
 if (bulkOrderForm) {
-    bulkOrderForm.addEventListener("submit", (event) => {
+    bulkOrderForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const quantityInput = bulkOrderForm.querySelector('input[type="number"]');
+        const quantityInput = bulkOrderForm.querySelector('input[name="quantity"]');
+        const submitButton = bulkOrderForm.querySelector('button[type="submit"]');
         const quantity = Number(quantityInput.value);
 
         if (quantity < 100) {
@@ -91,7 +96,28 @@ if (bulkOrderForm) {
             return;
         }
 
-        bulkOrderForm.reset();
-        showToast("Đã nhận yêu cầu báo giá. Đội ngũ sản xuất sẽ liên hệ bạn sớm!");
+        submitButton.disabled = true;
+        submitButton.textContent = "Đang gửi...";
+
+        try {
+            const formData = new FormData(bulkOrderForm);
+            const response = await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encodeFormData(formData)
+            });
+
+            if (!response.ok) {
+                throw new Error("Form submission failed");
+            }
+
+            bulkOrderForm.reset();
+            showToast("Đã nhận yêu cầu báo giá. Đội ngũ sản xuất sẽ liên hệ bạn sớm!");
+        } catch (error) {
+            showToast("Chưa gửi được yêu cầu. Vui lòng thử lại hoặc liên hệ trực tiếp với We Viet.");
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = "Gửi yêu cầu báo giá";
+        }
     });
 }

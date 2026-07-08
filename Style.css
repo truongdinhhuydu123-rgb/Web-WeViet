@@ -341,6 +341,10 @@ img {
     box-shadow: 0 26px 80px rgba(0, 0, 0, 0.28);
 }
 
+.honeypot {
+    display: none;
+}
+
 .bulk-form h3 {
     font-size: 26px;
 }
@@ -573,3 +577,4 @@ footer {
         padding: 26px 20px;
     }
 }
+

@@ -152,11 +152,15 @@
                 </div>
             </div>
 
-            <form class="bulk-form" id="bulkOrderForm">
+            <form class="bulk-form" id="bulkOrderForm" name="bulk-order" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="bulk-order">
+                <p class="honeypot">
+                    <label>Không điền mục này nếu bạn là khách hàng thật <input name="bot-field"></label>
+                </p>
                 <h3>Gửi yêu cầu báo giá</h3>
                 <div class="form-grid">
                     <label>Loại sản phẩm
-                        <select required>
+                        <select name="product_type" required>
                             <option value="">Chọn sản phẩm</option>
                             <option>Áo thun</option>
                             <option>Hoodie</option>
@@ -166,17 +170,17 @@
                         </select>
                     </label>
                     <label>Số lượng
-                        <input type="number" min="100" step="10" placeholder="Tối thiểu 100" required>
+                        <input type="number" name="quantity" min="100" step="10" placeholder="Tối thiểu 100" required>
                     </label>
                     <label>Thời hạn cần hàng
-                        <input type="date" required>
+                        <input type="date" name="deadline" required>
                     </label>
                     <label>Thông tin liên hệ
-                        <input type="text" placeholder="Email hoặc số điện thoại" required>
+                        <input type="text" name="contact" placeholder="Email hoặc số điện thoại" required>
                     </label>
                 </div>
                 <label>Chi tiết đơn hàng
-                    <textarea rows="4" placeholder="Mô tả chất liệu, màu sắc, size, in/thêu, nhãn mác, đóng gói và địa điểm giao hàng."></textarea>
+                    <textarea name="order_details" rows="4" maxlength="1200" placeholder="Mô tả chất liệu, màu sắc, size, in/thêu, nhãn mác, đóng gói và địa điểm giao hàng."></textarea>
                 </label>
                 <button class="primary-button" type="submit">Gửi yêu cầu báo giá</button>
             </form>
@@ -236,3 +240,4 @@
 </body>
 
 </html>
+
