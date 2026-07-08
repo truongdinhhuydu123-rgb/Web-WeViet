@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Viet - Thời trang & xưởng may</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="#home" aria-label="Trang chủ We Viet">We Viet</a>
+
+        <nav class="main-nav" aria-label="Điều hướng chính">
+            <a href="#home">Trang chủ</a>
+            <a href="#products">Sản phẩm</a>
+            <a href="#bulk-order">Đặt may số lượng lớn</a>
+            <a href="#about">Về chúng tôi</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="link-button" data-auth="login">Đăng nhập</button>
+            <button class="primary-button small" data-auth="register">Đăng ký</button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Bộ sưu tập mới 2026</p>
+                <h1>Thời trang đường phố cho nhịp sống Việt.</h1>
+                <p class="hero-copy">Khám phá các mẫu áo, hoodie, denim và phụ kiện dễ phối. We Viet cũng nhận sản xuất theo đơn hàng lớn cho thương hiệu, công ty và sự kiện.</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#products">Mua ngay</a>
+                    <a class="secondary-button" href="#about">Tìm hiểu thương hiệu</a>
+                    <a class="secondary-button" href="#bulk-order">Nhận báo giá xưởng</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" aria-label="Danh mục sản phẩm">
+            <article>
+                <span>01</span>
+                <h2>Áo cơ bản</h2>
+                <p>Áo thun, tank top và các mẫu mặc hằng ngày.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h2>Áo khoác</h2>
+                <p>Hoodie, jacket và sơ mi khoác ngoài.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h2>Phụ kiện</h2>
+                <p>Nón, túi, tất và các chi tiết hoàn thiện outfit.</p>
+            </article>
+        </section>
+
+        <section class="products" id="products">
+            <div class="section-heading">
+                <p class="eyebrow">Sản phẩm nổi bật</p>
+                <h2>Mẫu đang được chọn nhiều</h2>
+            </div>
+
+            <div class="product-container">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=600&q=80" alt="Áo thun cotton form rộng">
+                    <div class="card-body">
+                        <p class="tag">Áo thun</p>
+                        <h3>Áo thun cotton form rộng</h3>
+                        <p class="price">590.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="Áo hoodie dày dặn màu đen">
+                    <div class="card-body">
+                        <p class="tag">Hoodie</p>
+                        <h3>Hoodie nỉ dày cao cấp</h3>
+                        <p class="price">950.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80" alt="Quần jeans ống đứng">
+                    <div class="card-body">
+                        <p class="tag">Denim</p>
+                        <h3>Quần jeans ống đứng</h3>
+                        <p class="price">820.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?auto=format&fit=crop&w=600&q=80" alt="Áo khoác bomber phong cách streetwear">
+                    <div class="card-body">
+                        <p class="tag">Áo khoác</p>
+                        <h3>Áo bomber streetwear</h3>
+                        <p class="price">1.350.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=600&q=80" alt="Nón lưỡi trai logo We Viet">
+                    <div class="card-body">
+                        <p class="tag">Phụ kiện</p>
+                        <h3>Nón logo classic</h3>
+                        <p class="price">420.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Giày sneaker phong cách đường phố">
+                    <div class="card-body">
+                        <p class="tag">Giày</p>
+                        <h3>Sneaker street runner</h3>
+                        <p class="price">1.690.000đ</p>
+                        <button>Thêm vào giỏ</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="bulk-order" id="bulk-order">
+            <div class="bulk-copy">
+                <p class="eyebrow">Đặt may trực tiếp từ xưởng</p>
+                <h2>Nhận sản xuất áo theo yêu cầu khi số lượng đủ lớn.</h2>
+                <p>We Viet có năng lực làm việc trực tiếp với xưởng may, phù hợp cho đồng phục đội nhóm, áo sự kiện, áo công ty, local brand và các bộ sưu tập đặt riêng. Khách hàng có thể gửi yêu cầu để được tư vấn chất liệu, form dáng, in/thêu và báo giá.</p>
+
+                <div class="bulk-points" aria-label="Lợi ích khi đặt may số lượng lớn">
+                    <article>
+                        <strong>Từ 100 áo</strong>
+                        <span>Số lượng khuyến nghị để tối ưu chi phí sản xuất.</span>
+                    </article>
+                    <article>
+                        <strong>In / thêu logo</strong>
+                        <span>Hỗ trợ artwork, nhãn mác và đóng gói theo nhu cầu.</span>
+                    </article>
+                    <article>
+                        <strong>Làm mẫu trước</strong>
+                        <span>Kiểm tra form, chất liệu và chi tiết trước khi sản xuất hàng loạt.</span>
+                    </article>
+                </div>
+            </div>
+
+            <form class="bulk-form" id="bulkOrderForm">
+                <h3>Gửi yêu cầu báo giá</h3>
+                <div class="form-grid">
+                    <label>Loại sản phẩm
+                        <select required>
+                            <option value="">Chọn sản phẩm</option>
+                            <option>Áo thun</option>
+                            <option>Hoodie</option>
+                            <option>Áo khoác</option>
+                            <option>Đồng phục</option>
+                            <option>Bộ sưu tập đặt riêng</option>
+                        </select>
+                    </label>
+                    <label>Số lượng
+                        <input type="number" min="100" step="10" placeholder="Tối thiểu 100" required>
+                    </label>
+                    <label>Thời hạn cần hàng
+                        <input type="date" required>
+                    </label>
+                    <label>Thông tin liên hệ
+                        <input type="text" placeholder="Email hoặc số điện thoại" required>
+                    </label>
+                </div>
+                <label>Chi tiết đơn hàng
+                    <textarea rows="4" placeholder="Mô tả chất liệu, màu sắc, size, in/thêu, nhãn mác, đóng gói và địa điểm giao hàng."></textarea>
+                </label>
+                <button class="primary-button" type="submit">Gửi yêu cầu báo giá</button>
+            </form>
+        </section>
+
+        <section class="about" id="about">
+            <div>
+                <p class="eyebrow">Về We Viet</p>
+                <h2>Thiết kế dễ mặc, sản xuất linh hoạt, phù hợp khách hàng Việt.</h2>
+            </div>
+            <p>We Viet tập trung vào các sản phẩm streetwear có tính ứng dụng cao, dễ phối trong học tập, công việc, du lịch và cuối tuần. Bên cạnh bán lẻ, chúng tôi còn hỗ trợ sản xuất theo đơn để khách hàng xây dựng đồng phục, merchandise hoặc bộ sưu tập riêng.</p>
+        </section>
+    </main>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+            <button class="close-button" id="closeAuth" aria-label="Đóng form đăng nhập">x</button>
+            <div class="auth-tabs" role="tablist" aria-label="Biểu mẫu tài khoản">
+                <button class="active" data-tab="login" role="tab">Đăng nhập</button>
+                <button data-tab="register" role="tab">Đăng ký</button>
+            </div>
+
+            <form class="auth-form active" id="loginForm">
+                <h2 id="authTitle">Chào mừng bạn quay lại</h2>
+                <label>Email
+                    <input type="email" placeholder="ban@example.com" required>
+                </label>
+                <label>Mật khẩu
+                    <input type="password" placeholder="Nhập mật khẩu" required minlength="6">
+                </label>
+                <button class="primary-button" type="submit">Đăng nhập</button>
+            </form>
+
+            <form class="auth-form" id="registerForm">
+                <h2>Tạo tài khoản</h2>
+                <label>Họ và tên
+                    <input type="text" placeholder="Tên của bạn" required>
+                </label>
+                <label>Email
+                    <input type="email" placeholder="ban@example.com" required>
+                </label>
+                <label>Mật khẩu
+                    <input type="password" placeholder="Tối thiểu 6 ký tự" required minlength="6">
+                </label>
+                <button class="primary-button" type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>© 2026 We Viet Fashion Store</p>
+        <p>Email: hello@weviet.store</p>
+    </footer>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <script src="Script.js"></script>
+</body>
+
+</html>
